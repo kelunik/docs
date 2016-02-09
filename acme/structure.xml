@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="API Documentation" version="2.8.5">
+  <partials/>
+  <file path="KeyPair.php" generated-path="KeyPair.html" hash="24dab5931c34f16ac55cdf19233683fe" package="Default">
+    <docblock line="0">
+      <description>This file is part of the ACME package.</description>
+      <long-description></long-description>
+      <tag name="copyright" line="0" description="Copyright (c) 2015-2016, Niklas Keller"/>
+      <tag name="license" line="0" description="MIT" link="http://opensource.org/licenses/MIT"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Kelunik\Acme" line="18" package="Kelunik\Acme">
+      <extends/>
+      <name>KeyPair</name>
+      <full_name>\Kelunik\Acme\KeyPair</full_name>
+      <docblock line="18">
+        <description>RSA key pair.</description>
+        <long-description></long-description>
+        <tag name="author" line="18" description="Niklas Keller" link="mailto:me@kelunik.com"/>
+        <tag name="package" line="18" description="Kelunik\Acme"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="35" package="Kelunik\Acme">
+        <name>__construct</name>
+        <full_name>\Kelunik\Acme\KeyPair::__construct()</full_name>
+        <docblock line="35">
+          <description>KeyPair constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="35" description="&lt;p&gt;private key (PEM encoded)&lt;/p&gt;" type="string" variable="$private">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="35" description="&lt;p&gt;public key (PEM encoded)&lt;/p&gt;" type="string" variable="$public">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$private</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$public</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="54" package="Kelunik\Acme">
+        <name>getPrivate</name>
+        <full_name>\Kelunik\Acme\KeyPair::getPrivate()</full_name>
+        <docblock line="54">
+          <description>Gets the private key.</description>
+          <long-description></long-description>
+          <tag name="api" line="54" description=""/>
+          <tag name="return" line="54" description="private key (PEM encoded)" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="64" package="Kelunik\Acme">
+        <name>getPublic</name>
+        <full_name>\Kelunik\Acme\KeyPair::getPublic()</full_name>
+        <docblock line="64">
+          <description>Gets the public key.</description>
+          <long-description></long-description>
+          <tag name="api" line="64" description=""/>
+          <tag name="return" line="64" description="public key (PEM encoded)" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJylVF1vmzAUfedX3FWdBFHabJO2l36sURVN1ZQp2voYKXKdC1iAjWyTLpr633ttwCPN1jabH8DAueecezlw/rnO6yiajEYRjOA2FwZSUSLQuWbagkrB5gjT6/mMbvCCZXhKSAe+4qreapHlFq7DLuYJfHj3/uMJHT6N4ZsoSmbgK5Ylal9UCo7SIMxvbul6EkWSVWiIGh2qkaJYTnmFZ8HT9x9TKHBL6kIHadbYXOldejiv8KpoOU65qi49sjO9Q+6FOVW60u2CiOFXBLS8pFtUuGEajNVCZlBrsWEWvY14MZsDSq7WuE468MSfe9Rxt6EWnuNs7mgUr6b06H3G3j5XkngbbpWbkX8WROk9sqqX7c292NNeXev3dbZbUNpIboWSsFoFf3FvYNxTJt3s3RIpxG+EWbWiAZsMMW7ZXKt7kHgPyxu5YaVYT3XWVCjt7CfH2onGhoqlTeOjZei5aoyFO/Sh3tbY9TaGtwYysUF5NIYMrXs0kE7OgvRD9HenbS//a7Qd3EE+O+E/2zy29EWfXPYDuBiE8ymklb74nbUB1SBxX9Aa/0sYBGgvcqwWYa/RNloe+Ck9CRB1u2gL4+GEO+rdJl82HiJ8iO9/yb2z7W8953pn2g+P9Big6A==</source>
+  </file>
+  <file path="KeyGenerator.php" generated-path="KeyGenerator.html" hash="4a5598d9e0a17a35188185fc3964e196" package="Default">
+    <docblock line="0">
+      <description>This file is part of the ACME package.</description>
+      <long-description></long-description>
+      <tag name="copyright" line="0" description="Copyright (c) 2015-2016, Niklas Keller"/>
+      <tag name="license" line="0" description="MIT" link="http://opensource.org/licenses/MIT"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <interface namespace="Kelunik\Acme" line="18" package="Kelunik\Acme">
+      <name>KeyGenerator</name>
+      <full_name>\Kelunik\Acme\KeyGenerator</full_name>
+      <docblock line="18">
+        <description>Key generator interface to generate RSA keys.</description>
+        <long-description></long-description>
+        <tag name="author" line="18" description="Niklas Keller" link="mailto:me@kelunik.com"/>
+        <tag name="package" line="18" description="Kelunik\Acme"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="26" package="Kelunik\Acme">
+        <name>generate</name>
+        <full_name>\Kelunik\Acme\KeyGenerator::generate()</full_name>
+        <docblock line="26">
+          <description>Generates a new key pair with the given length in bits.</description>
+          <long-description></long-description>
+          <tag name="api" line="26" description=""/>
+          <tag name="param" line="26" description="&lt;p&gt;length of the key&lt;/p&gt;" type="integer" variable="$bits">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="26" description="generated key pair" type="\Kelunik\Acme\KeyPair">
+            <type>\Kelunik\Acme\KeyPair</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$bits</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+    </interface>
+    <source>eJxVkcFOwzAQRO/+ijlwaCNoAQkuVNCqQghVRQh65OKGTbJK4kSOQ1Uh/p21SYzqQ+ysZz3P48VDW7RKzZNEIcGu4A4ZVwSZW20dmgyuIKzW20cppKXOaSZKL16mTXu0nBcO67iapFNcX17dXMjn9hwvXFa6w4aqimxoqjgl0xG2zzv5nytldE2dHE1e1RsuP1ZpTXeRaUNH5GTIatdYsHFkM692zVgmvL2vUNKxi2i6d4WoT+yxqGlZ/nnM0qa+D8rhUifmAezfSQieIsC3gozA5keCYYs6aBg6eA5Jii0O7IoQXs5fZFCRyaXABnt2njS0j6csdctxLcnr2l8VZ147tg5vIQZRacn11njCV285BvIZKQblPMxtv5f4kfUmddyYKJ8Em+md+vkFFSah6A==</source>
+  </file>
+  <file path="AcmeClient.php" generated-path="AcmeClient.html" hash="69bfe50d75d8a07e5063810ab34c0522" package="Default">
+    <docblock line="0">
+      <description>This file is part of the ACME package.</description>
+      <long-description></long-description>
+      <tag name="copyright" line="0" description="Copyright (c) 2015-2016, Niklas Keller"/>
+      <tag name="license" line="0" description="MIT" link="http://opensource.org/licenses/MIT"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Client">\Amp\Artax\Client</namespace-alias>
+    <namespace-alias name="NullCookieJar">\Amp\Artax\Cookie\NullCookieJar</namespace-alias>
+    <namespace-alias name="Request">\Amp\Artax\Request</namespace-alias>
+    <namespace-alias name="Response">\Amp\Artax\Response</namespace-alias>
+    <namespace-alias name="CoroutineResult">\Amp\CoroutineResult</namespace-alias>
+    <namespace-alias name="Deferred">\Amp\Deferred</namespace-alias>
+    <namespace-alias name="Failure">\Amp\Failure</namespace-alias>
+    <namespace-alias name="Success">\Amp\Success</namespace-alias>
+    <namespace-alias name="Exception">\Exception</namespace-alias>
+    <namespace-alias name="InvalidArgumentException">\InvalidArgumentException</namespace-alias>
+    <namespace-alias name="Base64UrlSafeEncoder">\Namshi\JOSE\Base64\Base64UrlSafeEncoder</namespace-alias>
+    <namespace-alias name="SimpleJWS">\Namshi\JOSE\SimpleJWS</namespace-alias>
+    <namespace-alias name="Throwable">\Throwable</namespace-alias>
+    <class final="false" abstract="false" namespace="Kelunik\Acme" line="32" package="Kelunik\Acme">
+      <extends/>
+      <name>AcmeClient</name>
+      <full_name>\Kelunik\Acme\AcmeClient</full_name>
+      <docblock line="32">
+        <description>Low level ACME client.</description>
+        <long-description></long-description>
+        <tag name="author" line="32" description="Niklas Keller" link="mailto:me@kelunik.com"/>
+        <tag name="package" line="32" description="Kelunik\Acme"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="66" package="Kelunik\Acme">
+        <name>__construct</name>
+        <full_name>\Kelunik\Acme\AcmeClient::__construct()</full_name>
+        <docblock line="66">
+          <description>AcmeClient constructor.</description>
+          <long-description></long-description>
+          <tag name="api" line="66" description=""/>
+          <tag name="param" line="66" description="&lt;p&gt;URI to the ACME server directory&lt;/p&gt;" type="string" variable="$dictionaryUri">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="66" description="&lt;p&gt;account key pair&lt;/p&gt;" type="\Kelunik\Acme\KeyPair" variable="$keyPair">
+            <type>\Kelunik\Acme\KeyPair</type>
+          </tag>
+          <tag name="param" line="66" description="&lt;p&gt;custom HTTP client, default client will be used if no value is provided&lt;/p&gt;" type="\Amp\Artax\Client|null" variable="$http">
+            <type>\Amp\Artax\Client</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$dictionaryUri</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$keyPair</name>
+          <default></default>
+          <type>\Kelunik\Acme\KeyPair</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$http</name>
+          <default>null</default>
+          <type>\Amp\Artax\Client|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="192" package="Kelunik\Acme">
+        <name>get</name>
+        <full_name>\Kelunik\Acme\AcmeClient::get()</full_name>
+        <docblock line="192">
+          <description>Retrieves a resource using a GET request.</description>
+          <long-description></long-description>
+          <tag name="api" line="192" description=""/>
+          <tag name="param" line="192" description="&lt;p&gt;resource to fetch&lt;/p&gt;" type="string" variable="$resource">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="192" description="resolves to the HTTP response" type="\Amp\Promise">
+            <type>\Amp\Promise</type>
+          </tag>
+          <tag name="throws" line="192" description="If the request failed." type="\Kelunik\Acme\AcmeException">
+            <type>\Kelunik\Acme\AcmeException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$resource</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="235" package="Kelunik\Acme">
+        <name>post</name>
+        <full_name>\Kelunik\Acme\AcmeClient::post()</full_name>
+        <docblock line="235">
+          <description>Retrieves a resource using a POST request.</description>
+          <long-description></long-description>
+          <tag name="api" line="235" description=""/>
+          <tag name="param" line="235" description="&lt;p&gt;resource to fetch&lt;/p&gt;" type="string" variable="$resource">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="235" description="" type="array" variable="$payload">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="235" description="resolves to the HTTP response" type="\Amp\Promise">
+            <type>\Amp\Promise</type>
+          </tag>
+          <tag name="throws" line="235" description="If the request failed." type="\Kelunik\Acme\AcmeException">
+            <type>\Kelunik\Acme\AcmeException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$resource</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$payload</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+    <source>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</source>
+  </file>
+  <file path="AcmeService.php" generated-path="AcmeService.html" hash="633901e7ded03533310ee7300317d832" package="Default">
+    <docblock line="0">
+      <description>This file is part of the ACME package.</description>
+      <long-description></long-description>
+      <tag name="copyright" line="0" description="Copyright (c) 2015-2016, Niklas Keller"/>
+      <tag name="license" line="0" description="MIT" link="http://opensource.org/licenses/MIT"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Client">\Amp\Artax\Client</namespace-alias>
+    <namespace-alias name="NullCookieJar">\Amp\Artax\Cookie\NullCookieJar</namespace-alias>
+    <namespace-alias name="Response">\Amp\Artax\Response</namespace-alias>
+    <namespace-alias name="CoroutineResult">\Amp\CoroutineResult</namespace-alias>
+    <namespace-alias name="Pause">\Amp\Pause</namespace-alias>
+    <namespace-alias name="InvalidArgumentException">\InvalidArgumentException</namespace-alias>
+    <namespace-alias name="Base64UrlSafeEncoder">\Namshi\JOSE\Base64\Base64UrlSafeEncoder</namespace-alias>
+    <class final="false" abstract="false" namespace="Kelunik\Acme" line="26" package="Kelunik\Acme">
+      <extends/>
+      <name>AcmeService</name>
+      <full_name>\Kelunik\Acme\AcmeService</full_name>
+      <docblock line="26">
+        <description>High level ACME client.</description>
+        <long-description></long-description>
+        <tag name="author" line="26" description="Niklas Keller" link="mailto:me@kelunik.com"/>
+        <tag name="package" line="26" description="Kelunik\Acme"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="44" package="Kelunik\Acme">
+        <name>__construct</name>
+        <full_name>\Kelunik\Acme\AcmeService::__construct()</full_name>
+        <docblock line="44">
+          <description>AcmeService constructor.</description>
+          <long-description></long-description>
+          <tag name="api" line="44" description=""/>
+          <tag name="param" line="44" description="&lt;p&gt;ACME client&lt;/p&gt;" type="\Kelunik\Acme\AcmeClient" variable="$acmeClient">
+            <type>\Kelunik\Acme\AcmeClient</type>
+          </tag>
+          <tag name="param" line="44" description="&lt;p&gt;account key pair&lt;/p&gt;" type="\Kelunik\Acme\KeyPair" variable="$accountKeyPair">
+            <type>\Kelunik\Acme\KeyPair</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$acmeClient</name>
+          <default></default>
+          <type>\Kelunik\Acme\AcmeClient</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$accountKeyPair</name>
+          <default></default>
+          <type>\Kelunik\Acme\KeyPair</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="58" package="Kelunik\Acme">
+        <name>register</name>
+        <full_name>\Kelunik\Acme\AcmeService::register()</full_name>
+        <docblock line="58">
+          <description>Registers a new account on the server.</description>
+          <long-description></long-description>
+          <tag name="api" line="58" description=""/>
+          <tag name="param" line="58" description="&lt;p&gt;e-mail address for contact&lt;/p&gt;" type="string" variable="$email">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="58" description="&lt;p&gt;agreement URI or null if not agreed yet&lt;/p&gt;" type="string|null" variable="$agreement">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="58" description="resolves to a Registration object" type="\Amp\Promise">
+            <type>\Amp\Promise</type>
+          </tag>
+          <tag name="throws" line="58" description="If something went wrong." type="\Kelunik\Acme\AcmeException">
+            <type>\Kelunik\Acme\AcmeException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$email</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$agreement</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="183" package="Kelunik\Acme">
+        <name>requestChallenges</name>
+        <full_name>\Kelunik\Acme\AcmeService::requestChallenges()</full_name>
+        <docblock line="183">
+          <description>Requests challenges for a given DNS name.</description>
+          <long-description></long-description>
+          <tag name="api" line="183" description=""/>
+          <tag name="param" line="183" description="&lt;p&gt;DNS name to request challenge for&lt;/p&gt;" type="string" variable="$dns">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="183" description="resolves to an array of challenges" type="\Amp\Promise">
+            <type>\Amp\Promise</type>
+          </tag>
+          <tag name="throws" line="183" description="If something went wrong." type="\Kelunik\Acme\AcmeException">
+            <type>\Kelunik\Acme\AcmeException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$dns</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="232" package="Kelunik\Acme">
+        <name>answerChallenge</name>
+        <full_name>\Kelunik\Acme\AcmeService::answerChallenge()</full_name>
+        <docblock line="232">
+          <description>Answers a challenge and signals that the CA should validate it.</description>
+          <long-description></long-description>
+          <tag name="api" line="232" description=""/>
+          <tag name="param" line="232" description="&lt;p&gt;URI of the challenge&lt;/p&gt;" type="string" variable="$location">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="232" description="&lt;p&gt;key authorization&lt;/p&gt;" type="string" variable="$keyAuth">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="232" description="resolves to the decoded JSON response" type="\Amp\Promise">
+            <type>\Amp\Promise</type>
+          </tag>
+          <tag name="throws" line="232" description="If something went wrong." type="\Kelunik\Acme\AcmeException">
+            <type>\Kelunik\Acme\AcmeException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$location</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$keyAuth</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="283" package="Kelunik\Acme">
+        <name>pollForChallenge</name>
+        <full_name>\Kelunik\Acme\AcmeService::pollForChallenge()</full_name>
+        <docblock line="283">
+          <description>Polls until a challenge has been validated.</description>
+          <long-description></long-description>
+          <tag name="api" line="283" description=""/>
+          <tag name="param" line="283" description="&lt;p&gt;URI of the challenge&lt;/p&gt;" type="string" variable="$location">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="283" description="resolves to null" type="\Amp\Promise">
+            <type>\Amp\Promise</type>
+          </tag>
+          <tag name="throws" line="283" description="" type="\Kelunik\Acme\AcmeException">
+            <type>\Kelunik\Acme\AcmeException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$location</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="341" package="Kelunik\Acme">
+        <name>requestCertificate</name>
+        <full_name>\Kelunik\Acme\AcmeService::requestCertificate()</full_name>
+        <docblock line="341">
+          <description>Requests a new certificate.</description>
+          <long-description></long-description>
+          <tag name="api" line="341" description=""/>
+          <tag name="param" line="341" description="&lt;p&gt;domain key pair&lt;/p&gt;" type="\Kelunik\Acme\KeyPair" variable="$keyPair">
+            <type>\Kelunik\Acme\KeyPair</type>
+          </tag>
+          <tag name="param" line="341" description="&lt;p&gt;domains to include in the certificate (first will be used as common name)&lt;/p&gt;" type="array" variable="$domains">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="341" description="resolves to the URI where the certificate will be provided" type="\Amp\Promise">
+            <type>\Amp\Promise</type>
+          </tag>
+          <tag name="throws" line="341" description="If something went wrong." type="\Kelunik\Acme\AcmeException">
+            <type>\Kelunik\Acme\AcmeException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$keyPair</name>
+          <default></default>
+          <type>\Kelunik\Acme\KeyPair</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$domains</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="442" package="Kelunik\Acme">
+        <name>pollForCertificate</name>
+        <full_name>\Kelunik\Acme\AcmeService::pollForCertificate()</full_name>
+        <docblock line="442">
+          <description>Polls for a certificate.</description>
+          <long-description></long-description>
+          <tag name="api" line="442" description=""/>
+          <tag name="param" line="442" description="&lt;p&gt;URI of the certificate&lt;/p&gt;" type="string" variable="$location">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="442" description="resolves to the complete certificate chain as array of PEM encoded certificates" type="\Amp\Promise">
+            <type>\Amp\Promise</type>
+          </tag>
+          <tag name="throws" line="442" description="If something went wrong." type="\Kelunik\Acme\AcmeException">
+            <type>\Kelunik\Acme\AcmeException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$location</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="527" package="Kelunik\Acme">
+        <name>selfVerify</name>
+        <full_name>\Kelunik\Acme\AcmeService::selfVerify()</full_name>
+        <docblock line="527">
+          <description>Verifies a HTTP-01 challenge.</description>
+          <long-description>Can be used to verify a challenge before requesting validation from a CA to catch errors early.</long-description>
+          <tag name="api" line="527" description=""/>
+          <tag name="param" line="527" description="&lt;p&gt;domain to verify&lt;/p&gt;" type="string" variable="$domain">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="527" description="&lt;p&gt;challenge token&lt;/p&gt;" type="string" variable="$token">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="527" description="&lt;p&gt;expected payload&lt;/p&gt;" type="string" variable="$payload">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="527" description="resolves to null" type="\Amp\Promise">
+            <type>\Amp\Promise</type>
+          </tag>
+          <tag name="throws" line="527" description="If the challenge could not be verified." type="\Kelunik\Acme\AcmeException">
+            <type>\Kelunik\Acme\AcmeException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$domain</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$token</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$payload</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="592" package="Kelunik\Acme">
+        <name>revokeCertificate</name>
+        <full_name>\Kelunik\Acme\AcmeService::revokeCertificate()</full_name>
+        <docblock line="592">
+          <description>Revokes a certificate.</description>
+          <long-description></long-description>
+          <tag name="api" line="592" description=""/>
+          <tag name="param" line="592" description="&lt;p&gt;PEM encoded certificate&lt;/p&gt;" type="string" variable="$pem">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="592" description="resolves to true" type="\Amp\Promise">
+            <type>\Amp\Promise</type>
+          </tag>
+          <tag name="throws" line="592" description="If something went wrong." type="\Kelunik\Acme\AcmeException">
+            <type>\Kelunik\Acme\AcmeException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$pem</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="666" package="Kelunik\Acme">
+        <name>generateHttp01Payload</name>
+        <full_name>\Kelunik\Acme\AcmeService::generateHttp01Payload()</full_name>
+        <docblock line="666">
+          <description>Generates the payload which must be provided in HTTP-01 challenges.</description>
+          <long-description></long-description>
+          <tag name="api" line="666" description=""/>
+          <tag name="param" line="666" description="&lt;p&gt;challenge token&lt;/p&gt;" type="string" variable="$token">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="666" description="payload to be provided at /.well-known/acme-challenge/$token" type="string">
+            <type>string</type>
+          </tag>
+          <tag name="throws" line="666" description="If something went wrong." type="\Kelunik\Acme\AcmeException">
+            <type>\Kelunik\Acme\AcmeException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$token</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+    </class>
+    <markers>
+      <todo line="359">Improve error message</todo>
+      <todo line="403">Improve error message</todo>
+    </markers>
+    <source>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</source>
+  </file>
+  <file path="Registration.php" generated-path="Registration.html" hash="8310a95bfa263d76dcb7fbaf2cd031a0" package="Default">
+    <docblock line="0">
+      <description>This file is part of the ACME package.</description>
+      <long-description></long-description>
+      <tag name="copyright" line="0" description="Copyright (c) 2015-2016, Niklas Keller"/>
+      <tag name="license" line="0" description="MIT" link="http://opensource.org/licenses/MIT"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Kelunik\Acme" line="18" package="Kelunik\Acme">
+      <extends/>
+      <name>Registration</name>
+      <full_name>\Kelunik\Acme\Registration</full_name>
+      <docblock line="18">
+        <description>ACME registration object.</description>
+        <long-description></long-description>
+        <tag name="author" line="18" description="Niklas Keller" link="mailto:me@kelunik.com"/>
+        <tag name="package" line="18" description="Kelunik\Acme"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="53" package="Kelunik\Acme">
+        <name>__construct</name>
+        <full_name>\Kelunik\Acme\Registration::__construct()</full_name>
+        <docblock line="53">
+          <description>Registration constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="53" description="&lt;p&gt;URI of the registration object&lt;/p&gt;" type="string" variable="$location">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="53" description="&lt;p&gt;all contacts registered with the server&lt;/p&gt;" type="array" variable="$contact">
+            <type>array</type>
+          </tag>
+          <tag name="param" line="53" description="&lt;p&gt;URI to the agreement, if agreed&lt;/p&gt;" type="string|null" variable="$agreement">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="param" line="53" description="&lt;p&gt;URI to retrieve authorizations&lt;/p&gt;" type="string" variable="$authorizations">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="53" description="&lt;p&gt;URI to retrieve certificates&lt;/p&gt;" type="string" variable="$certificates">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$location</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$contact</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$agreement</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$authorizations</name>
+          <default>null</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$certificates</name>
+          <default>null</default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="67" package="Kelunik\Acme">
+        <name>getLocation</name>
+        <full_name>\Kelunik\Acme\Registration::getLocation()</full_name>
+        <docblock line="67">
+          <description>Gets the location URI.</description>
+          <long-description></long-description>
+          <tag name="api" line="67" description=""/>
+          <tag name="return" line="67" description="URI to retrieve this registration object" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="77" package="Kelunik\Acme">
+        <name>getContact</name>
+        <full_name>\Kelunik\Acme\Registration::getContact()</full_name>
+        <docblock line="77">
+          <description>Gets the contact addresses.</description>
+          <long-description></long-description>
+          <tag name="api" line="77" description=""/>
+          <tag name="return" line="77" description="contacts registered with the server" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="87" package="Kelunik\Acme">
+        <name>getAgreement</name>
+        <full_name>\Kelunik\Acme\Registration::getAgreement()</full_name>
+        <docblock line="87">
+          <description>Gets the agreement URI.</description>
+          <long-description></long-description>
+          <tag name="api" line="87" description=""/>
+          <tag name="return" line="87" description="URI to the agreement, if agreed, otherwise &lt;code&gt;null&lt;/code&gt;" type="null|string">
+            <type>null</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="97" package="Kelunik\Acme">
+        <name>getAuthorizations</name>
+        <full_name>\Kelunik\Acme\Registration::getAuthorizations()</full_name>
+        <docblock line="97">
+          <description>Gets the authorizations URI.</description>
+          <long-description></long-description>
+          <tag name="api" line="97" description=""/>
+          <tag name="return" line="97" description="URI to retrieve authorizations or null" type="null|string">
+            <type>null</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="107" package="Kelunik\Acme">
+        <name>getCertificates</name>
+        <full_name>\Kelunik\Acme\Registration::getCertificates()</full_name>
+        <docblock line="107">
+          <description>Gets the certificates URI.</description>
+          <long-description></long-description>
+          <tag name="api" line="107" description=""/>
+          <tag name="return" line="107" description="URI to retrieve certficates or null" type="null|string">
+            <type>null</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJylVcFum0AQvfMVc+jBsYjdVmovtd1YVlVFbXqI0lNbRZtlDFsDi3YXR2mTf++ywIYFjHHKwV5gZt68mTfD4mMWZZ43n049mMJNxCRsWYyg/zMiFPAtqAhhvbn6pB/QHQlxpi0L4wvKswfBwkjBxp4m9Azevn7z7lz/vPfhG9vFRMIXjGMUxilmFFOJcHV5o+/nnpeSBKUOjYVVnrLdzzVN8IPNyUALDJlUgijGU+B3v5EqmwbJVcSFCwWLBC92ZbwZ5cnKWFYEHCCTBNWeEq6bIH890JfJobi0954I0K9ZGsL368u6Mj2ZVR5z858JticK4VXMqTHSzPoiEyHIA5A4BspTRaiSVWgUGMA9U5GBkyj2RSX7ECrHAwBpHsePjfwVNwFJKBATTJUPbFveBf3hreV4AIH6FvcaxfSI/TEVkAVSJvieBQexHPsXAFIUim2ZLjmOgGtad8EcXegi63NOFRezysAmpSeGJLVGzGW7Pk4ydYhSDFWIqq0nasPN5rGoVaOFIxXQS6nVy+FWDwVyejTUQLdp+Z3eIbDNU2oKeHtrWzKx5farEtriLeHHL79ZgKWRj9+hY5872ZVPz6qtYLJXeleer2x/l80Jbxk9J/E8oy2TZmLNSWubtZPtTEob2mXRUnph+NTR+2fUAiuU0RRvR+wkY/asu5aLFA7MYpHJ8T3ZamuI6msFP2nWvYJqlf8oFTtEQSBQSpRj+JQaOnkfd5lsyhADRBxdDPBwJngMhxPWvg9cvxL3TH+eF5QHuCqcF3NzPEZxXQccINnS9RDNzo55IddDXyBefj6OsnK8hqj1jOGQHFur73/ZFfHqcCOpbRopDAmzZ2E8ef8A2Zsbyg==</source>
+  </file>
+  <file path="AcmeResource.php" generated-path="AcmeResource.html" hash="cddab12b0d5ef518cf88bf7319d7ac02" package="Default">
+    <docblock line="0">
+      <description>This file is part of the ACME package.</description>
+      <long-description></long-description>
+      <tag name="copyright" line="0" description="Copyright (c) 2015-2016, Niklas Keller"/>
+      <tag name="license" line="0" description="MIT" link="http://opensource.org/licenses/MIT"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Kelunik\Acme" line="18" package="Kelunik\Acme">
+      <extends/>
+      <name>AcmeResource</name>
+      <full_name>\Kelunik\Acme\AcmeResource</full_name>
+      <docblock line="18">
+        <description>Collection of ACME resources.</description>
+        <long-description></long-description>
+        <tag name="author" line="18" description="Niklas Keller" link="mailto:me@kelunik.com"/>
+        <tag name="package" line="18" description="Kelunik\Acme"/>
+      </docblock>
+      <constant namespace="Kelunik\Acme" line="22" package="Kelunik\Acme">
+        <name>NEW_REGISTRATION</name>
+        <full_name>\Kelunik\Acme\AcmeResource::NEW_REGISTRATION</full_name>
+        <value>"new-reg"</value>
+        <docblock line="22">
+          <description>New registration.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="27" package="Kelunik\Acme">
+        <name>RECOVER_REGISTRATION</name>
+        <full_name>\Kelunik\Acme\AcmeResource::RECOVER_REGISTRATION</full_name>
+        <value>"recover-reg"</value>
+        <docblock line="27">
+          <description>Recover registration.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="32" package="Kelunik\Acme">
+        <name>NEW_AUTHORIZATION</name>
+        <full_name>\Kelunik\Acme\AcmeResource::NEW_AUTHORIZATION</full_name>
+        <value>"new-authz"</value>
+        <docblock line="32">
+          <description>New authorization.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="37" package="Kelunik\Acme">
+        <name>NEW_CERTIFICATE</name>
+        <full_name>\Kelunik\Acme\AcmeResource::NEW_CERTIFICATE</full_name>
+        <value>"new-cert"</value>
+        <docblock line="37">
+          <description>New certificate.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="42" package="Kelunik\Acme">
+        <name>REVOKE_CERTIFICATE</name>
+        <full_name>\Kelunik\Acme\AcmeResource::REVOKE_CERTIFICATE</full_name>
+        <value>"revoke-cert"</value>
+        <docblock line="42">
+          <description>Revoke certificate.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="47" package="Kelunik\Acme">
+        <name>REGISTRATION</name>
+        <full_name>\Kelunik\Acme\AcmeResource::REGISTRATION</full_name>
+        <value>"reg"</value>
+        <docblock line="47">
+          <description>Registration.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="52" package="Kelunik\Acme">
+        <name>AUTHORIZATION</name>
+        <full_name>\Kelunik\Acme\AcmeResource::AUTHORIZATION</full_name>
+        <value>"authz"</value>
+        <docblock line="52">
+          <description>Authorization.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="57" package="Kelunik\Acme">
+        <name>CHALLENGE</name>
+        <full_name>\Kelunik\Acme\AcmeResource::CHALLENGE</full_name>
+        <value>"challenge"</value>
+        <docblock line="57">
+          <description>Challenge.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="62" package="Kelunik\Acme">
+        <name>CERTIFICATE</name>
+        <full_name>\Kelunik\Acme\AcmeResource::CERTIFICATE</full_name>
+        <value>"cert"</value>
+        <docblock line="62">
+          <description>Certificate.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+    </class>
+    <source>eJyFkl1PwjAUhu/3K068UiKgJnojKstSYQFGUicmxsQszWFr9lHSFogY/7vtGCR8DHqxttt5n/OeN+u8zJKZ47QbDQcaECZcwZRnCGafRVKDmIJOEFxvRMwLlkYxtkylLe4yMfuRPE40eNvTJbuCu5vb+6Z5PFxDwNMsUjDALENZijLOsFAIIz8097bjFFGOyqDRVs0Lnn65LMfHrSdPGC3TXBTWTGlEohJzyVBtrURznQi52w46OXbTNbPFRP5cVlZD7DQrjTCjVGCvtMLDrwNmlT7sakCAS9M85krLyDpqVR/a5c5EoTQE5OObkp7/FlI39McBPMFFgcum0V2YqfaIFJlYGK/nqJR44wmhB2S51tfQrd91NHx10rD7HvbH1P/ccWyVqxoqQ6n5lLNIYx3TIzT0X33PDcmGaFVHQ1iIFM8xKZmMB2QfK0ttPflcrPtxHovRPRfhQXx10XlJZH7NIj46oNd3h0MS9Mq52KbyGOV0UHsJVdH8/QO7ow8I</source>
+  </file>
+  <file path="AcmeError.php" generated-path="AcmeError.html" hash="a6450281aa8bb43cdb12953837721286" package="Default">
+    <docblock line="0">
+      <description>This file is part of the ACME package.</description>
+      <long-description></long-description>
+      <tag name="copyright" line="0" description="Copyright (c) 2015-2016, Niklas Keller"/>
+      <tag name="license" line="0" description="MIT" link="http://opensource.org/licenses/MIT"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Kelunik\Acme" line="18" package="Kelunik\Acme">
+      <extends/>
+      <name>AcmeError</name>
+      <full_name>\Kelunik\Acme\AcmeError</full_name>
+      <docblock line="18">
+        <description>Collection of ACME error codes.</description>
+        <long-description></long-description>
+        <tag name="author" line="18" description="Niklas Keller" link="mailto:me@kelunik.com"/>
+        <tag name="package" line="18" description="Kelunik\Acme"/>
+      </docblock>
+      <constant namespace="Kelunik\Acme" line="22" package="Kelunik\Acme">
+        <name>TYPE_BAD_CSR</name>
+        <full_name>\Kelunik\Acme\AcmeError::TYPE_BAD_CSR</full_name>
+        <value>"badCSR"</value>
+        <docblock line="22">
+          <description>Bad CSR.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="27" package="Kelunik\Acme">
+        <name>TYPE_BAD_NONCE</name>
+        <full_name>\Kelunik\Acme\AcmeError::TYPE_BAD_NONCE</full_name>
+        <value>"badNonce"</value>
+        <docblock line="27">
+          <description>Bad replay nonce.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="32" package="Kelunik\Acme">
+        <name>TYPE_CONNECTION</name>
+        <full_name>\Kelunik\Acme\AcmeError::TYPE_CONNECTION</full_name>
+        <value>"connection"</value>
+        <docblock line="32">
+          <description>Connection error.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="37" package="Kelunik\Acme">
+        <name>TYPE_DNSSEC</name>
+        <full_name>\Kelunik\Acme\AcmeError::TYPE_DNSSEC</full_name>
+        <value>"dnssec"</value>
+        <docblock line="37">
+          <description>Error related to DNSSEC.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="42" package="Kelunik\Acme">
+        <name>TYPE_MALFORMED</name>
+        <full_name>\Kelunik\Acme\AcmeError::TYPE_MALFORMED</full_name>
+        <value>"malformed"</value>
+        <docblock line="42">
+          <description>Malformed request.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="47" package="Kelunik\Acme">
+        <name>TYPE_SERVER_INTERNAL</name>
+        <full_name>\Kelunik\Acme\AcmeError::TYPE_SERVER_INTERNAL</full_name>
+        <value>"serverInternal"</value>
+        <docblock line="47">
+          <description>Internal server error.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="52" package="Kelunik\Acme">
+        <name>TYPE_TLS</name>
+        <full_name>\Kelunik\Acme\AcmeError::TYPE_TLS</full_name>
+        <value>"tls"</value>
+        <docblock line="52">
+          <description>TLS error.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="57" package="Kelunik\Acme">
+        <name>TYPE_UNAUTHORIZED</name>
+        <full_name>\Kelunik\Acme\AcmeError::TYPE_UNAUTHORIZED</full_name>
+        <value>"unauthorized"</value>
+        <docblock line="57">
+          <description>Unauthorized.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kelunik\Acme" line="62" package="Kelunik\Acme">
+        <name>TYPE_UNKNOWN_HOST</name>
+        <full_name>\Kelunik\Acme\AcmeError::TYPE_UNKNOWN_HOST</full_name>
+        <value>"unknownHost"</value>
+        <docblock line="62">
+          <description>Unknown host.</description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+    </class>
+    <source>eJyFksGO0zAQhu95itGeoIIWkODCAptNjRpt46AkBYGQKuNMN1EcO9guaEG8O7bTrVgpLT7EHvv/v5lxfPluaIYoWsxmEcygaloDu1YguHlg2oLagW0Q4iQjboN37BbnTunFV1wNd7q9bSwkx9Uj/hhePHv+8qn7vHoCtO0EM3CDQqAOJtFylAYhSysXL6JIsh6NQ6NX7WXbfY15j6+PNSXKebltlfTFhEJQa6WBqxrNsRi2t43bfJAQLnu86kbqnKv+bVAe2niQLpTCndOAD0lI8DsCN0IZfszgmtWQlMX8EC/CzJU0FqrPH8j2Ol5u3Tm8gYtvrHarC9fGBEPjINgdSCU5noXRnCbkgKNePQFMlJSH+wn3chKY5JSSpEpz6on8aJtgjv1rFMxiDVbBkpYlSU6ix2OPraUxyCeQGRM7pXv03X/fo7EnYVm8fp8XGVl6Xn9vm0Cm0qKWTIBB/cP97fPtl6T4SIptSitS0Hjt4aPvHjORoVqX/6F6hSNZYSbsGzm+yvYX1icJGxpvqlVepF/Gjvf/mCaZnVQ/JTTqzBVu6A3NP9HtKi+rkRlMK+dxyD9/AbIdEgo=</source>
+  </file>
+  <file path="AcmeException.php" generated-path="AcmeException.html" hash="1884ef03c6b9550282b377c2268c612b" package="Default">
+    <docblock line="0">
+      <description>This file is part of the ACME package.</description>
+      <long-description></long-description>
+      <tag name="copyright" line="0" description="Copyright (c) 2015-2016, Niklas Keller"/>
+      <tag name="license" line="0" description="MIT" link="http://opensource.org/licenses/MIT"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Exception">\Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="Kelunik\Acme" line="20" package="Kelunik\Acme">
+      <extends>\Exception</extends>
+      <name>AcmeException</name>
+      <full_name>\Kelunik\Acme\AcmeException</full_name>
+      <docblock line="20">
+        <description>Generic ACME exception.</description>
+        <long-description></long-description>
+        <tag name="author" line="20" description="Niklas Keller" link="mailto:me@kelunik.com"/>
+        <tag name="package" line="20" description="Kelunik\Acme"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="28" package="Kelunik\Acme">
+        <name>__construct</name>
+        <full_name>\Kelunik\Acme\AcmeException::__construct()</full_name>
+        <docblock line="28">
+          <description>AcmeException constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="28" description="&lt;p&gt;detailed error message&lt;/p&gt;" type="string" variable="$message">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="28" description="&lt;p&gt;ACME error code&lt;/p&gt;" type="string|null" variable="$code">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="param" line="28" description="&lt;p&gt;previous exception&lt;/p&gt;" type="null" variable="$previous">
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$message</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$code</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$previous</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJxtUstuwjAQvPsr9pADRLxaqT0ApSCEqqqipx4rodRZiJXEjvyoWrX8ezeOkwJiD7G9ntmZXWf+WGUVY+M4ZhDDWyYM7EWBQGuVaAtqDzZDWK23G0rwPDngiJA1eMlV9a3FIbOw7nY93ofbyc3dkD73A3gVeZEYeMGiQO1JheAoDcL2+Y3OY8ZkUqKh0lijnBT5+4qXOGPMEWrzxbGyQslZ5/EJJWrBG0vY3nemEmczpc+FYV7iMm+qj7gqFx4Z2jmT9ZY4MQ3Ux06ehCzK1Pwbgh8GFN5UHfEFgStprHbcKj0KiBZIyjopga6FPPgcRDQDU5tJ0SY0/xRQa2ojpK8yf6UrCoi4SsP7NJT6fIH3wBBRpfFTKEfv2266IQba2K+V+6C3gr2T3De023Ut9Vq7gyD/4CUGJ8WbTD9MyddLNEo7nV6vMzkh92cdKbL0Rw4XQcSLNZdHdvwD2ZDXYg==</source>
+  </file>
+  <file path="OpenSSLKeyGenerator.php" generated-path="OpenSSLKeyGenerator.html" hash="aa5aca56ee8960ce7840d7a6c7058017" package="Default">
+    <docblock line="0">
+      <description>This file is part of the ACME package.</description>
+      <long-description></long-description>
+      <tag name="copyright" line="0" description="Copyright (c) 2015-2016, Niklas Keller"/>
+      <tag name="license" line="0" description="MIT" link="http://opensource.org/licenses/MIT"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Kelunik\Acme" line="18" package="Kelunik\Acme">
+      <extends/>
+      <implements>\Kelunik\Acme\KeyGenerator</implements>
+      <name>OpenSSLKeyGenerator</name>
+      <full_name>\Kelunik\Acme\OpenSSLKeyGenerator</full_name>
+      <docblock line="18">
+        <description>RSA key generator using OpenSSL.</description>
+        <long-description></long-description>
+        <tag name="author" line="18" description="Niklas Keller" link="mailto:me@kelunik.com"/>
+        <tag name="package" line="18" description="Kelunik\Acme"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kelunik\Acme" line="26" package="Kelunik\Acme">
+        <name>generate</name>
+        <full_name>\Kelunik\Acme\OpenSSLKeyGenerator::generate()</full_name>
+        <docblock line="26">
+          <description>Generates a new key pair with the given length in bits.</description>
+          <long-description></long-description>
+          <tag name="api" line="26" description=""/>
+          <tag name="param" line="26" description="&lt;p&gt;length of the key&lt;/p&gt;" type="integer" variable="$bits">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="26" description="generated key pair" type="\Kelunik\Acme\KeyPair">
+            <type>\Kelunik\Acme\KeyPair</type>
+          </tag>
+          <tag name="inherited_from" description="\Kelunik\Acme\KeyGenerator::generate()" refers="\Kelunik\Acme\KeyGenerator::generate()" link="/classes/Kelunik.Acme.KeyGenerator.html#method_generate"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$bits</name>
+          <default>2048</default>
+          <type>integer</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJyNVGFv2jAQ/Z5fcY2YFBCDbdqmSaUdqEJTxdqiwpeqVJEJl8QicSzbgaKJ/76zE1JY12n+QML53b13704ZfJep9Lx+p+NBB+Yp1xDzDIGekikDRQwmRRhd3YwpEK1Zgj1CWvAwKuRO8SQ1cNW8BVEbPn34+OU9/Xztwi1fZ0zDBLMMlUvKeIRCI9xcz+l/3/MEy1FTabSoUvD1YhTleN5oup+NYI07SFCgYqZQUGouEriTKGazn40aVpqULk8YYZDjcF2V7UVFfumQdR8nfE5LRJn6UHiCux8NJc9lhjkKYysfxX95QMcptacD9RVqYCBw65RLxhVsuUmdlQnfoIAMRUIBLmDJje7V6YcqQyZ5805zYDkhDbQs9pBaT4YIGqRCUyphFU4tZe0YrhoVNbLvnrJc0jAgLkVkeCEaeFDRXNAcP39r1y3aw2MIzrgOSUqFaR/f2mNSVWxd34trsWEZX41UUlrfxs8RSksTaKmoQBz4i4onL7WBJbp+dhJto114pyuf/C7JMjZ+YGyfN4x770RaVW7wSvb/CvPJN13NKcYtLY9JmXDV3IyAKQRRGGBZVmxxdeb/XUpLoTWvoC3SOgsleR8ScfB4IsgnFzZkdmivbX8+XFzC3XR8S6sXTsYP84fpOKTd776dZlW5NNf5C/CJhL3I0WUUoX4lCZ9loWiOpLYLrbosOXCc6wZ+KPAPS+9LYXiOp1ZCxQAxo+/J225VW2jxfwikuYcrNJStncr2o09h/+lIX73vVkO988FRJ92j4jX53tv/BhX6ejE=</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="Kelunik" full_name="Kelunik">
+    <package name="Acme" full_name="Kelunik\Acme"/>
+  </package>
+  <package name="global" full_name="global"/>
+  <namespace name="Kelunik" full_name="Kelunik">
+    <namespace name="Acme" full_name="Kelunik\Acme"/>
+  </namespace>
+  <deprecated count="0"/>
+</project>
